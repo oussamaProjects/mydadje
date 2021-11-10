@@ -1,0 +1,183 @@
+/* ./resources/css/app.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.header-right {
+    width: calc(100% - 16rem);
+}
+
+body {
+    font-size: 1rem;
+    background: #f5f5f5;
+}
+
+.tree {
+    position: relative;
+}
+
+.tree small {
+    font-style: italic;
+    letter-spacing: 0.4px;
+    color: #a8a8a8;
+}
+
+.tree .fa-folder-open,
+.tree .fa-folder {
+    color: #007bff;
+}
+
+.tree .fa-html5 {
+    color: #f21f10;
+}
+
+.tree ul {
+    padding-left: 5px;
+    list-style: none;
+}
+
+.tree ul li {
+    position: relative;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.tree ul li:before {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    width: 10px;
+    height: 1px;
+    margin: auto;
+    content: "";
+    background-color: #666;
+}
+
+.tree ul li:after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 1px;
+    height: 100%;
+    content: "";
+    background-color: #666;
+}
+
+.tree ul li:last-child:after {
+    height: 15px;
+}
+
+.tree ul a {
+    cursor: pointer;
+}
+
+.tree ul a:hover {
+    text-decoration: none;
+}
+
+.nested {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+
+/* Style the caret/arrow */
+
+.caret {
+    cursor: pointer;
+    user-select: none;
+    /* Prevent text selection */
+    position: absolute;
+    right: 0;
+}
+
+
+/* Create the caret/arrow with a unicode, and style it */
+
+.caret::before {
+    content: "\25B6";
+    color: black;
+    display: inline-block;
+    margin-right: 6px;
+}
+
+
+/* Rotate the caret/arrow icon when clicked on (using JavaScript) */
+
+.caret-down::before {
+    transform: rotate(90deg);
+}
+
+ul.pagination {
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+    border-radius: 0.25rem;
+    align-items: center;
+    justify-content: center;
+}
+
+ul.pagination li.page-item {
+    line-height: 24px;
+    margin-right: 0.5rem;
+}
+
+ul.pagination li.page-item .page-link {
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    display: block;
+    font-size: 14px;
+    line-height: 28px;
+    user-select: none;
+    position: relative;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid #999;
+    box-sizing: content-box;
+    background: transparent;
+}
+
+ul.pagination li.page-item.active .page-link,
+ul.pagination li.page-item>a.page-link:hover {
+    color: #fff;
+    border-color: #028ce8;
+    background-color: #028ce8;
+}
+
+.colors>.update_color:first-child>div,
+.colors>.update_color_folder:first-child>div {
+    position: relative;
+}
+
+.colors>.update_color:first-child>div::before,
+.colors>.update_color_folder:first-child>div::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: 10px;
+    bottom: auto;
+    right: auto;
+    display: block;
+    width: 1px;
+    height: 20px;
+    transform: rotate(45deg);
+    background-color: red;
+}
+
+.colors>.update_color:first-child>div::after,
+.colors>.update_color_folder:first-child>div::after {
+    background-color: white;
+}
