@@ -104,8 +104,8 @@ input:checked + label {
 }
 
 input[name="color"]:checked + label {
-    border: 1px solid rgba(255, 255, 255, var(--tw-text-opacity));
-    box-shadow: 1px 0px 3px rgba(255, 255, 255, var(--tw-text-opacity));
+    border: 1px solid rgba(10, 10, 10, var(--tw-text-opacity));
+    box-shadow: 1px 0px 3px rgba(10, 10, 10, var(--tw-text-opacity));
 }
 
 .add_folder {

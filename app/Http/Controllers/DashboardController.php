@@ -19,15 +19,21 @@ class DashboardController extends Controller
 
     public function favoriteDocument(int $id)
     {
-        $document = Document::findOrFail($id); 
-        auth()->user()->toggleFavorite($document); 
+        try {
+            $document = Document::findOrFail($id);
+            auth()->user()->toggleFavorite($document);
+        } catch (\Throwable $th) {}
+        
         return redirect()->back()->with('success', 'Added to favories');
     }
 
     public function favoriteFolder(int $id)
     {
-        $folder = Folder::findOrFail($id); 
-        auth()->user()->toggleFavorite($folder);
+        try {
+            $folder = Folder::findOrFail($id);
+            auth()->user()->toggleFavorite($folder);
+        } catch (\Throwable $th) {}
+
         return redirect()->back()->with('success', 'Added to favories');
     }
 
