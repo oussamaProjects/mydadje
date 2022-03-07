@@ -8,7 +8,7 @@
     @include('folders.inc.head')
 
 
-    <div class="flex flex-row flex-wrap mt-2 mb-3 mx-4 gap-4 bg-bg-color">
+    <div class="flex flex-row flex-wrap mt-2 mb-3 mx-4 gap-4 bg-white p-3">
         @if (count($all_folders) > 0)
             @foreach ($all_folders as $folder)
                 @include('inc.folders.folder',['folder' => $folder])

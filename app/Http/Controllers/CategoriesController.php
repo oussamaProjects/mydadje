@@ -51,7 +51,7 @@ class CategoriesController extends Controller
 
         \Log::addToLog('New category ' . $request->input('name') . ' was added');
 
-        return redirect()->back()->with('success', 'La catégorie a été ajoutée avec succès !');
+        return redirect()->back()->with('success', 'La catégorie a été ajoutée avec succès !');
     }
 
     /**
@@ -98,7 +98,7 @@ class CategoriesController extends Controller
 
         \Log::addToLog('Category ID ' . $id . ' was edited');
 
-        return redirect('categories')->with('success', 'la catégorie a été mise à jour avec succès !');
+        return redirect('categories')->with('success', 'La catégorie a été mise à jour avec succès !');
     }
 
     /**
@@ -116,7 +116,7 @@ class CategoriesController extends Controller
 
         \Log::addToLog('Category ID ' . $id . ' was deleted');
 
-        return redirect('/categories')->with('success', 'la catégorie a été supprimée avec succès !');
+        return redirect('/categories')->with('success', 'La catégorie a été supprimée avec succès !');
     }
 
     // multiple checkbox delete
@@ -127,6 +127,6 @@ class CategoriesController extends Controller
 
         \Log::addToLog('All categories were deleted');
 
-        return redirect('categories')->with('success', 'les catégories ont été supprimées avec succès !');
+        return redirect('categories')->with('success', 'Les catégories ont été supprimées avec succès !');
     }
 }

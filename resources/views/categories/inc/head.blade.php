@@ -8,9 +8,11 @@
                     </h3>
                 </div>
                 <div class="relative w-full max-w-full flex-grow flex-1 text-right">
-                    <button id="add_categorie" 
+                    <button id="add_categorie"
                         class="flex text-bg-color bg-secondary hover:text-main hover:bg-tertiary border py-2 px-6 text-tiny focus:outline-none transition hover:no-underline ml-auto"
-                        type="button">Ajouter une activités</button>
+                        type="button">
+                        Ajouter une activité
+                    </button>
                 </div>
             </div>
         </div>

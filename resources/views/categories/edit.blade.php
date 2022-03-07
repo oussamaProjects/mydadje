@@ -14,7 +14,7 @@
 
                 <div class="mb-2 relative">
                     <label for="name" class="text-xs opacity-75 scale-75">
-                        Nom de catégorie
+                        Nom de l'activité
                     </label>
                     {{ Form::text('name', $category->name, ['autocomplete' => 'off','class' =>'peer border border-main focus:outline-none focus:border-secondary shadow-sm focus:shadow-sm-sm w-full py-1 px-2 h-8 text-sm bg-bg-color','id' => 'category']) }}
                 </div>

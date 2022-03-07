@@ -30,7 +30,7 @@
                                         class="font-bold">{{ $dept['dptName'] }}</span></div>
                                 <div class="mb-2">
 
-                                    <div class="mb-">
+                                    <div>
                                         <input type="radio" name="permissions_{{ $dept['id'] }}[]"
                                             class="opacity-0 absolute"
                                             id="folder_sub_{{ $sub['id'] }}_{{ $dept['id'] }}_none"
@@ -41,7 +41,7 @@
                                             utilisateur</label>
                                     </div>
 
-                                    <div class="mb-2">
+                                    <div>
                                         <input type="radio" name="permissions_{{ $dept['id'] }}[]"
                                             class="opacity-0 absolute" value="{{ $dept['id'] }}_all"
                                             id="folder_sub_{{ $sub['id'] }}_{{ $dept['id'] }}_all">

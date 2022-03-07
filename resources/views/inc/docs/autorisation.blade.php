@@ -2,7 +2,7 @@
     @if (count($subs) > 0)
         <div class="mb-2 relative">
             <h3 class="mb-2 text-xl font-medium uppercase">Autorisation</h3>
-            <div class="flex flex-col gap-4 flex-wrap">
+            <div class="flex flex-row gap-4 flex-wrap">
 
                 @foreach ($subs as $sub)
                     <div>
@@ -32,7 +32,7 @@
                                 </div>
                                 <div class="mb-2">
 
-                                    <div class="mb-1">
+                                    <div>
                                         <input type="radio" name="permissions_{{ $dept['id'] }}[]"
                                             class="opacity-0 absolute"
                                             id="docs_sub_{{ $sub['id'] }}_{{ $dept['id'] }}_none"
@@ -44,7 +44,7 @@
                                             utilisateur</label>
                                     </div>
 
-                                    <div class="mb-1">
+                                    <div>
                                         <input type="radio" name="permissions_{{ $dept['id'] }}[]"
                                             class="opacity-0 absolute" value="{{ $dept['id'] }}_all"
                                             id="docs_sub_{{ $sub['id'] }}_{{ $dept['id'] }}_all"
@@ -55,7 +55,7 @@
                                             utilisateurs</label>
                                     </div>
 
-                                    <div class="mb-1">
+                                    <div>
                                         <input type="radio" name="permissions_{{ $dept['id'] }}[]"
                                             class="opacity-0 absolute"
                                             id="docs_sub_{{ $sub['id'] }}_{{ $dept['id'] }}_admins"

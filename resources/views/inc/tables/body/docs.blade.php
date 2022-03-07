@@ -3,7 +3,7 @@
        <input type="checkbox" id="chk_{{ $current_doc->id }}" class="sub_chk" data-id="{{ $current_doc->id }}"><label for="chk_{{ $current_doc->id }}"></label> 
     </td> --}}
     <td class="px-2 py-3 text-sm">{{ $current_doc->name }} V-{{ $current_doc->version }}</td>
-    <td class="px-2 py-3 text-sm">{{ $current_doc->user->name }}</td>
+    <td class="px-2 py-3 text-sm">{{ $current_doc->user->name ?? '' }}</td>
     <td class="px-2 py-3 text-sm">{{ $current_doc->filesize }}</td>
     <td class="px-2 py-3 text-sm">
         @include('inc.mime-type', ['doc'=>$doc])
