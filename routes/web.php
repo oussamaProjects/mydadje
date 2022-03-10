@@ -82,7 +82,7 @@ Route::resource('roles', 'RolesController');
 Route::resource('profile', 'ProfileController');
 Route::patch('profile', 'ProfileController@changePassword');
 
-// registeration requests
+// registration requests
 Route::resource('requests', 'RequestsController');
 
 // backup
@@ -92,5 +92,5 @@ Route::get('backup/download', 'BackupController@download');
 Route::get('backup/delete', 'BackupController@delete');
 
 // log
-Route::get('logs', 'LogController@log');
+Route::get('logsList', 'LogController@log');
 Route::get('logsdel', 'LogController@logdel');

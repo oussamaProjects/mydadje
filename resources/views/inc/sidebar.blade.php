@@ -135,8 +135,8 @@
                 </li> --}}
 
                 <li>
-                    <a href="/logs"
-                        class="{{ request()->is('logs*') ? 'bg-secondary text-bg-color-800' : '' }} relative flex flex-row items-center h-7 focus:outline-none hover:bg-secondary text-bg-color-600 hover:text-bg-color-800 border-l-4 border-transparent hover:border-main pr-6">
+                    <a href="/logsList"
+                        class="{{ request()->is('logsList*') ? 'bg-secondary text-bg-color-800' : '' }} relative flex flex-row items-center h-7 focus:outline-none hover:bg-secondary text-bg-color-600 hover:text-bg-color-800 border-l-4 border-transparent hover:border-main pr-6">
                         <span class="inline-flex justify-center items-center ml-4">
                             @include('inc.icons.settings')
                         </span>
