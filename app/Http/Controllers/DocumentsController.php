@@ -462,16 +462,16 @@ class DocumentsController extends Controller
    */
   public function destroy($id)
   {
+
     $user = auth()->user();
     if ($user->hasRole('Root')) {
-      $doc = Document::findOrFail($id);
+      $doc = Document::where('id', $id)->get();
       // delete the file on disk
       Storage::delete($doc->file);
       // delete db record
       $doc->delete();
       // delete associated categories
       $doc->categories()->detach();
-
       Log::addToLog('Document ID ' . $id . ' was deleted');
 
       return redirect('/documents/' . $id)->with('success', 'Le fichier a été supprimé avec succès !');

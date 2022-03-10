@@ -47,6 +47,7 @@
                 </svg>
             </a>
             {!! Form::close() !!}
+            
             @hasanyrole('Root|Admin')
                 @can('read')
                     {!! Form::open() !!}
