@@ -41,7 +41,7 @@
 
                     <div class="block w-full overflow-x-auto">
                         <table
-                            class="table-auto table-auto w-full text-left whitespace-no-wrap border border-bg-color border border-bg-color">
+                            class="table-auto w-full text-left whitespace-no-wrap border border-bg-color border border-bg-color">
                             <thead>
                                 <tr>
                                     <th
@@ -86,7 +86,7 @@
                                         </td>
                                         <td
                                             class="border-t-0 px-2 py-2 align-middle border-l-0 border-r-0 text-xs bg-colorspace-nowrap">
-                                            {{ $log->user_id }}
+                                            {{ App\User::findOrFail($log->id)->name ?? '' }}
                                         </td>
                                         <td
                                             class="border-t-0 px-2 py-2 align-middle border-l-0 border-r-0 text-xs bg-colorspace-nowrap">

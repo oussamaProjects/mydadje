@@ -82,60 +82,62 @@
                     @endif --}}
 
 
-                <div class="flex flex-row w-full justify-between items-center p-4">
+                <div class="flex flex-col w-full items-start p-4">
 
                     @if (count($users) > 0)
                         @foreach ($users as $user)
-                            <div class=" ">
-                                <p class="text-sm">Hi, I am <b>{{ $user->name }}</b> , my email is
-                                    <b>{{ $user->email }}</b>.
-                                    <br>and I want to be one of the system users who belongs to the department of
-                                </p>
-                            </div>
+                            <div class="flex flex-row w-full">
+                                <div class="flex flex-row">
+                                    <p class="text-sm">Hi, I am <b>{{ $user->name }}</b> , my email is
+                                        <b>{{ $user->email }}</b>.
+                                        <br>and I want to be one of the system users who belongs to the department of
+                                    </p>
+                                </div>
 
-                            <div class="">
-                                <p class="text-sm text-main">{{ $user->created_at->diffForHumans() }}</p>
-                            </div>
+                                <div class="">
+                                    <p class="text-sm text-main">{{ $user->created_at->diffForHumans() }}</p>
+                                </div>
 
-                            <div class="flex flex-col ml-8">
-                                @foreach ($user->departments()->get() as $dept)
-                                    <div class="flex flex-row items-center border p-1 m-1 px-2">
-                                        <div class="text-xs font-bold mr-4">{{ $dept['dptName'] }}</div>
-                                        <div class="flex items-start justify-start">
-                                            {!! Form::open(['action' => ['RequestsController@update', $user->id], 'method' => 'PATCH']) !!}
-                                            {{ csrf_field() }}
-                                            <button type="submit" name="role" value="admin">
-                                                <svg xmlns="http://www.w3.org/2000/svg"
-                                                    class="h-3 w-3 ml-2 text-secondary" fill="none" viewBox="0 0 24 24"
-                                                    stroke="currentColor">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                        d="M5 13l4 4L19 7" />
-                                                </svg>
-                                                <span class="text-xs text-secondary">Admin</span>
-                                            </button>
-                                            <button type="submit" name="role" value="user">
-                                                <svg xmlns="http://www.w3.org/2000/svg"
-                                                    class="h-3 w-3 ml-2 text-secondary" fill="none" viewBox="0 0 24 24"
-                                                    stroke="currentColor">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                        d="M5 13l4 4L19 7" />
-                                                </svg>
-                                                <span class="text-xs text-secondary">User</span>
-                                            </button>
-                                            {!! Form::close() !!}
-                                            {!! Form::open(['action' => ['UsersController@destroy', $user->id], 'method' => 'DELETE']) !!}
-                                            {{ csrf_field() }}
-                                            <button type="submit" name="b2">
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 ml-2 text-amber"
-                                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                        d="M6 18L18 6M6 6l12 12" />
-                                                </svg>
-                                            </button>
-                                            {!! Form::close() !!}
+                                <div class="flex flex-col ml-auto">
+                                    @foreach ($user->departments()->get() as $dept)
+                                        <div class="flex flex-row items-center border p-1 m-1 px-2">
+                                            <div class="text-xs font-bold mr-4">{{ $dept['dptName'] }}</div>
+                                            <div class="flex items-start justify-start">
+                                                {!! Form::open(['action' => ['RequestsController@update', $user->id], 'method' => 'PATCH']) !!}
+                                                {{ csrf_field() }}
+                                                <button type="submit" name="role" value="admin">
+                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                        class="h-3 w-3 ml-2 text-secondary" fill="none" viewBox="0 0 24 24"
+                                                        stroke="currentColor">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            stroke-width="2" d="M5 13l4 4L19 7" />
+                                                    </svg>
+                                                    <span class="text-xs text-secondary">Admin</span>
+                                                </button>
+                                                <button type="submit" name="role" value="user">
+                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                        class="h-3 w-3 ml-2 text-secondary" fill="none" viewBox="0 0 24 24"
+                                                        stroke="currentColor">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            stroke-width="2" d="M5 13l4 4L19 7" />
+                                                    </svg>
+                                                    <span class="text-xs text-secondary">User</span>
+                                                </button>
+                                                {!! Form::close() !!}
+                                                {!! Form::open(['action' => ['UsersController@destroy', $user->id], 'method' => 'DELETE']) !!}
+                                                {{ csrf_field() }}
+                                                <button type="submit" name="b2">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 ml-2 text-amber"
+                                                        fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                                    </svg>
+                                                </button>
+                                                {!! Form::close() !!}
+                                            </div>
                                         </div>
-                                    </div>
-                                @endforeach
+                                    @endforeach
+                                </div>
                             </div>
                         @endforeach
                     @else

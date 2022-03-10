@@ -26,7 +26,7 @@
 
     <div class="flex flex-row flex-wrap p-4 mb-4 mt-2 w-1/2">
 
-        {!! Form::open(['action' => ['UsersController@update', $user->id], 'method' => 'PATCH', 'enctype' => 'multipart/form-data', 'class' => 'w-full']) !!}
+        {!! Form::open(['action' => ['UsersController@update', $user->id], 'method' => 'PATCH', 'enctype' => 'multipart/form-data', 'class' => 'w-full bg-white p-2']) !!}
 
         {{ csrf_field() }}
 

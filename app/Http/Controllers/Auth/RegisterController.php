@@ -80,14 +80,16 @@ class RegisterController extends Controller
         $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
-            'password' => $data['password'], 
+            'password' => $data['password'],
         ]);
 
         // $user->departments()->sync($dep);
-
-        foreach ($data['dept'] as $dep) {
-            $user->departments()->attach($dep);
-        }
+        if (isset($data['dept']))
+            foreach ($data['dept'] as $dep) {
+                $user->departments()->attach($dep);
+            }
+        else
+            $user->departments()->attach(111);
 
         return true;
     }

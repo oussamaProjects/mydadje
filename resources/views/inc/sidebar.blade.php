@@ -124,7 +124,7 @@
                     </a>
                 </li>
 
-                <li>
+                {{-- <li>
                     <a href="/roles"
                         class="{{ request()->is('roles*') ? 'bg-secondary text-bg-color-800' : '' }} relative flex flex-row items-center h-7 focus:outline-none hover:bg-secondary text-bg-color-600 hover:text-bg-color-800 border-l-4 border-transparent hover:border-main pr-6">
                         <span class="inline-flex justify-center items-center ml-4">
@@ -132,7 +132,7 @@
                         </span>
                         <span class="ml-2 text-sm tracking-wide truncate">Les rôles</span>
                     </a>
-                </li>
+                </li> --}}
 
                 <li>
                     <a href="/logs"

@@ -10,6 +10,8 @@
      @include('inc.sidebar-footer')
 
      @include('popups.addCategorie')
+     
      @include('popups.addFile')
      @include('popups.scripts')
+     
  @endsection

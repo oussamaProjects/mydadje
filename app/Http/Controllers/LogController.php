@@ -18,8 +18,7 @@ class LogController extends Controller
 
     public function log()
     {
-    	$logs = \Log::logLists();
-
+    	$logs = \Log::logLists(); 
     	return view('pages.logs',compact('logs'));
     }
 
