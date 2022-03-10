@@ -222,8 +222,8 @@ class DocumentsController extends Controller
       ->get();
 
     $path = Storage::disk('local')->getDriver()->getAdapter()->applyPathPrefix($doc->file);
-    $path = Storage::disk('public')->path($doc->file);
-    $path = Storage::url($doc->file);
+    // $path = Storage::disk('public')->path($doc->file);
+    // $path = Storage::url($doc->file);
     $docID = $doc->id;
     // // get previous user id
     // $previous = Document::whereHas('categories', function ($query) use ($doc_id, $category_id) {
