@@ -36,7 +36,7 @@
 
 
                 <div class="lg:w-1/3 w-full lg:pr-4 lg:p-8 relative">
-                    
+
                     @if ($doc->archived == 1)
                         <div class="">
                             <h5 class=" text-red-500 text-tiny">
@@ -240,17 +240,16 @@
 
                 </div>
                 <div class="lg:w-2/3 w-full h-screen relative">
+                    
                     @if ($doc->mimetype == 'application/pdf')
                         <embed src="{{ $path }}" type="application/pdf" class="w-full h-full">
-                    @elseif ($doc->mimetype == 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
-                        <iframe
-                            src="https://docs.google.com/gview?url=http://ieee802.org/secmail/docIZSEwEqHFr.doc&embedded=true"
-                            frameborder="0" class="w-full h-full">
+                    @elseif ($doc->mimetype == 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' || $doc->mimetype == 'application/vnd.openxmlformats-officedocument.wordprocessingml.document')
+                        <iframe src="https://view.officeapps.live.com/op/view.aspx?src={{ url($path) }}" frameborder="0"
+                            class="w-full h-full">
                         </iframe>
                     @else
                         <img alt="" src="{{ $path }}" class="w-full h-full">
                     @endif
-
                 </div>
             </div>
         </section>
