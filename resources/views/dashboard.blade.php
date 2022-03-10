@@ -93,7 +93,7 @@
             </a>
 
 
-            <a href="/logs">
+            <a href="/logsList">
                 <div
                     class="bg-main shadow-sm-sm rounded-md flex items-center justify-between p-3 border-b-4 border-bg-main text-bg-color font-medium group">
                     <div

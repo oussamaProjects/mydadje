@@ -86,7 +86,7 @@
                                         </td>
                                         <td
                                             class="border-t-0 px-2 py-2 align-middle border-l-0 border-r-0 text-xs bg-colorspace-nowrap">
-                                            {{ App\User::findOrFail($log->id)->name ?? '' }}
+                                            {{ App\User::where('id', $log->id)->first()->name ?? '' }}
                                         </td>
                                         <td
                                             class="border-t-0 px-2 py-2 align-middle border-l-0 border-r-0 text-xs bg-colorspace-nowrap">
