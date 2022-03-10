@@ -19,7 +19,7 @@
 
                                 <th
                                     class="px-2 py-3 title-font tracking-wider font-medium text-bg-color text-sm bg-main shadow-sm">
-                                    e</th>
+                                    Nom de l'acitivite</th>
                                 <th
                                     class="px-2 py-3 title-font tracking-wider font-medium text-bg-color text-sm bg-main shadow-sm min-w-140-px">
                                     Actions

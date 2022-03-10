@@ -184,19 +184,19 @@
                                             </svg>
                                         </a>
                                     @endcan
-                                @endhasanyrole
 
-                                <a href="/documents/open/{{ $doc->id }}" target="_blank"
-                                    class="rounded-full w-10 h-10 bg-bg-color p-0 border border-main inline-flex items-center justify-center text-main ml-2"
-                                    data-position="top" data-delay="50" data-tooltip="Open this">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 m-1" fill="none"
-                                        viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                                    </svg>
-                                </a>
+                                    <a href="/documents/open/{{ $doc->id }}" target="_blank"
+                                        class="rounded-full w-10 h-10 bg-bg-color p-0 border border-main inline-flex items-center justify-center text-main ml-2"
+                                        data-position="top" data-delay="50" data-tooltip="Open this">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 m-1" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                                        </svg>
+                                    </a>
+                                @endhasanyrole
                             </div>
                             {!! Form::close() !!}
 
@@ -240,7 +240,7 @@
 
                 </div>
                 <div class="lg:w-2/3 w-full h-screen relative">
-                    
+
                     @if ($doc->mimetype == 'application/pdf')
                         <embed src="{{ $path }}" type="application/pdf" class="w-full h-full">
                     @elseif ($doc->mimetype == 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' || $doc->mimetype == 'application/vnd.openxmlformats-officedocument.wordprocessingml.document')
